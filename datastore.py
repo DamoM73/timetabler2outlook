@@ -60,6 +60,9 @@ class Datastore:
                     lesson_time = lesson_times[period_num][0]
                     lesson_duration = lesson_times[period_num][1]
                     lesson_name, lesson_room = self.get_lesson_and_room(lesson)
+                    if lesson_room == None:
+                        lesson_room = lesson_name
+                        lesson_name = "Duty"
                         
                     lessons.append(Lesson(lesson_day, lesson_period, lesson_name, lesson_time, lesson_duration, lesson_room))
                 else:
