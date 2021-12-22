@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Time Tabler to Outlook</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -23,8 +23,16 @@
          <widget class="QLabel" name="period_lb">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>14</pointsize>
+            <weight>9</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 255);</string>
           </property>
           <property name="text">
            <string>Period</string>
@@ -35,8 +43,16 @@
          <widget class="QLabel" name="mon_lb">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>14</pointsize>
+            <weight>9</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 255);</string>
           </property>
           <property name="text">
            <string>Mon</string>
@@ -50,8 +66,16 @@
          <widget class="QLabel" name="tues_lb">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>14</pointsize>
+            <weight>9</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 255);</string>
           </property>
           <property name="text">
            <string>Tues</string>
@@ -65,8 +89,16 @@
          <widget class="QLabel" name="wed_lb">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>14</pointsize>
+            <weight>9</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 255);</string>
           </property>
           <property name="text">
            <string>Wed</string>
@@ -80,8 +112,16 @@
          <widget class="QLabel" name="thurs_lb">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>14</pointsize>
+            <weight>9</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 255);</string>
           </property>
           <property name="text">
            <string>Thurs</string>
@@ -95,8 +135,16 @@
          <widget class="QLabel" name="fri_lb">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>14</pointsize>
+            <weight>9</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 255);</string>
           </property>
           <property name="text">
            <string>Fri</string>
@@ -118,7 +166,7 @@
            </font>
           </property>
           <property name="text">
-           <string>BS</string>
+           <string>Before School</string>
           </property>
          </widget>
         </item>
@@ -209,7 +257,7 @@
            </font>
           </property>
           <property name="text">
-           <string>BF</string>
+           <string>Before Form</string>
           </property>
          </widget>
         </item>
@@ -300,7 +348,7 @@
            </font>
           </property>
           <property name="text">
-           <string>F</string>
+           <string>Form</string>
           </property>
          </widget>
         </item>
@@ -573,7 +621,7 @@
            </font>
           </property>
           <property name="text">
-           <string>FBFH</string>
+           <string>1st Break 1st Half</string>
           </property>
          </widget>
         </item>
@@ -664,7 +712,7 @@
            </font>
           </property>
           <property name="text">
-           <string>FBSH</string>
+           <string>1st Break 2nd Half</string>
           </property>
          </widget>
         </item>
@@ -937,7 +985,7 @@
            </font>
           </property>
           <property name="text">
-           <string>SBFH</string>
+           <string>2nd Break 1st Half</string>
           </property>
          </widget>
         </item>
@@ -1028,7 +1076,7 @@
            </font>
           </property>
           <property name="text">
-           <string>SBSH</string>
+           <string>2nd Break 2nd Half</string>
           </property>
          </widget>
         </item>
@@ -1301,7 +1349,7 @@
            </font>
           </property>
           <property name="text">
-           <string>AS</string>
+           <string>After School</string>
           </property>
          </widget>
         </item>

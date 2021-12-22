@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'tt2outlook.ui'
+# Form implementation generated from reading ui file 'h:\GIT\timetabler2outlook\tt2outlook.ui'
 #
 # Created by: PyQt6 UI code generator 6.2.2
 #
@@ -817,13 +817,3 @@ class Ui_MainWindow(object):
         self.p5_lb.setText(_translate("MainWindow", "Period 5"))
         self.p6_lb.setText(_translate("MainWindow", "Period 6"))
         self.as_lb.setText(_translate("MainWindow", "After School"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec())

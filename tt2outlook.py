@@ -23,7 +23,6 @@ class MainWindow:
         self.signals()
 
 
-
     def show(self):
         self.main_win.show()
 
@@ -35,9 +34,11 @@ class MainWindow:
             else:
                 print(None)
 
+
     def write_to_button(self,button,lesson):
         if lesson != None:
             button.setText(lesson.subject+"\n"+lesson.location)
+
 
     def write_lessons(self):
         self.write_to_button(self.ui.mon_bs_btn,self.lessons[0])
@@ -111,6 +112,7 @@ class MainWindow:
         self.write_to_button(self.ui.fri_p6_btn,self.lessons[68])
         self.write_to_button(self.ui.fri_as_btn,self.lessons[69])
                 
+
     def signals(self):
         self.ui.mon_bs_btn.clicked.connect(lambda: self.edit_lesson(0))
         self.ui.mon_bf_btn.clicked.connect(lambda: self.edit_lesson(1))
@@ -185,8 +187,9 @@ class MainWindow:
     
     
     # ---- Slots ---- #
-    def edit_lesson(self,lesson_num):       
-        EditLesson(self.lessons[lesson_num])
+    def edit_lesson(self,lesson_num):
+        lesson = self.lessons[lesson_num]
+        EditLesson(lesson)
         self.write_lessons()
         
 

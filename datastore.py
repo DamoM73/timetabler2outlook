@@ -53,20 +53,22 @@ class Datastore:
                         ("10:50",55),("11:45",55),("12:40",20),("13:00",20),("13:20",55),("14:15",55),("3:10",20)]
 
         for day_num, day in enumerate(self.days):
-            for period_num, lesson in enumerate(day):
+            for period_num, lesson in enumerate(day):                
+                lesson_day = day_names[day_num]
+                lesson_period = self.periods[period_num]
+                lesson_time = lesson_times[period_num][0]
+                lesson_duration = lesson_times[period_num][1]
                 if lesson != "":
-                    lesson_day = day_names[day_num]
-                    lesson_period = self.periods[period_num]
-                    lesson_time = lesson_times[period_num][0]
-                    lesson_duration = lesson_times[period_num][1]
                     lesson_name, lesson_room = self.get_lesson_and_room(lesson)
                     if lesson_room == None:
                         lesson_room = lesson_name
                         lesson_name = "Duty"
-                        
-                    lessons.append(Lesson(lesson_day, lesson_period, lesson_name, lesson_time, lesson_duration, lesson_room))
                 else:
-                    lessons.append(None)
+                    lesson_name = ""
+                    lesson_room = ""
+                        
+                lessons.append(Lesson(lesson_day, lesson_period, lesson_name, lesson_time, lesson_duration, lesson_room))
+               
 
         return lessons
 
