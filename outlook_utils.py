@@ -1,4 +1,5 @@
 import win32com.client
+from PyQt6.QtCore import QDate
 
 class Calendar:
     
@@ -37,3 +38,20 @@ class Lesson:
     
     def show_lesson(self):
         print(self.day, self.period, self.subject, self.start, self.duration, self.location)
+        
+
+class TermValues:
+    
+    def __init__(self):
+        self.term_1_start = QDate.currentDate()
+        self.term_1_end = QDate.currentDate()
+        self.term_1_write = False
+        self.term_2_start = QDate.currentDate()
+        self.term_2_end = QDate.currentDate()
+        self.term_2_write = False
+        self.term_3_start = QDate.currentDate()
+        self.term_3_end = QDate.currentDate()
+        self.term_3_write = False
+        self.term_4_start = QDate.currentDate()
+        self.term_4_end = QDate.currentDate()
+        self.term_4_write = False

@@ -22,6 +22,7 @@ class EditLesson:
         self.ui.cancel_btn.clicked.connect(self.cancel_btn)
         
 
+    # ---- Slots ---- #
     def ok_btn(self):
         self.lesson.subject = self.ui.name_ent.text()
         self.lesson.location = self.ui.room_ent.text()

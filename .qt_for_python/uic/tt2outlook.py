@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(900, 695)
+        MainWindow.resize(899, 816)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
@@ -785,6 +785,14 @@ class Ui_MainWindow(object):
         self.fri_as_btn.setObjectName("fri_as_btn")
         self.horizontalLayout_18.addWidget(self.fri_as_btn)
         self.verticalLayout.addLayout(self.horizontalLayout_18)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem)
+        self.term_settings_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.term_settings_btn.setObjectName("term_settings_btn")
+        self.horizontalLayout_2.addWidget(self.term_settings_btn)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.gridLayout.addLayout(self.verticalLayout, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -817,3 +825,4 @@ class Ui_MainWindow(object):
         self.p5_lb.setText(_translate("MainWindow", "Period 5"))
         self.p6_lb.setText(_translate("MainWindow", "Period 6"))
         self.as_lb.setText(_translate("MainWindow", "After School"))
+        self.term_settings_btn.setText(_translate("MainWindow", "Term Settings"))

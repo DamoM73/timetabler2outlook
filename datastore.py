@@ -14,6 +14,7 @@ class Datastore:
     def get_value(self,cell):
         return self.sheet[cell].value
     
+    
     def get_period_names(self):
         for row in self.sheet.iter_rows(min_row = 3,
                                        max_row = 3, 
@@ -21,6 +22,7 @@ class Datastore:
                                        max_col = 15,
                                        values_only = True):
             return(row)
+    
     
     def get_time_table(self):
         days = []
@@ -32,6 +34,7 @@ class Datastore:
             days.append(row)
             
         return days
+    
     
     def get_lesson_and_room(self, raw):
         """
@@ -69,7 +72,4 @@ class Datastore:
                         
                 lessons.append(Lesson(lesson_day, lesson_period, lesson_name, lesson_time, lesson_duration, lesson_room))
                
-
         return lessons
-
-        

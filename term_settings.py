@@ -1,0 +1,65 @@
+import sys
+from datetime import date
+from PyQt6.QtWidgets import QApplication, QMainWindow, QDialog
+from PyQt6.QtCore import QDate
+from Ui_term_settings import Ui_Dialog
+
+
+class TermSettings:
+    
+    def __init__(self,term_values):
+        self.window = QDialog()
+        self.ui = Ui_Dialog()
+        self.ui.setupUi(self.window)
+        self.signals()
+        self.term_values = term_values
+        self.set_values()
+        self.window.show()
+        self.window.exec()
+        
+        
+
+    def signals(self):
+        self.ui.ok_btn.clicked.connect(self.ok_btn)
+        self.ui.cancel_btn.clicked.connect(self.cancel_btn)
+
+
+    def set_values(self):
+        # dates
+        self.ui.term_1_start_dt.setDate(self.term_values.term_1_start)
+        self.ui.term_1_end_dt.setDate(self.term_values.term_1_end)
+        self.ui.term_2_start_dt.setDate(self.term_values.term_2_start)
+        self.ui.term_2_end_dt.setDate(self.term_values.term_2_end)
+        self.ui.term_3_start_dt.setDate(self.term_values.term_3_start)
+        self.ui.term_3_end_dt.setDate(self.term_values.term_3_end)
+        self.ui.term_4_start_dt.setDate(self.term_values.term_4_start)
+        self.ui.term_4_end_dt.setDate(self.term_values.term_4_end)
+        # check boxes
+        self.ui.term_1_write_ck.setChecked(self.term_values.term_1_write)
+        self.ui.term_2_write_ck.setChecked(self.term_values.term_2_write)
+        self.ui.term_3_write_ck.setChecked(self.term_values.term_3_write)
+        self.ui.term_4_write_ck.setChecked(self.term_values.term_4_write)
+
+
+    # ---- Slots ---- #
+    def ok_btn(self):
+        self.term_values.term_1_start = self.ui.term_1_start_dt.date()
+        self.term_values.term_1_end = self.ui.term_1_end_dt.date()
+        self.term_values.term_1_write = self.ui.term_1_write_ck.isChecked()
+        self.term_values.term_2_start = self.ui.term_2_start_dt.date()
+        self.term_values.term_2_end = self.ui.term_2_end_dt.date()
+        self.term_values.term_2_write = self.ui.term_2_write_ck.isChecked()
+        self.term_values.term_3_start = self.ui.term_3_start_dt.date()
+        self.term_values.term_3_end = self.ui.term_3_end_dt.date()
+        self.term_values.term_3_write = self.ui.term_3_write_ck.isChecked()
+        self.term_values.term_4_start = self.ui.term_4_start_dt.date()
+        self.term_values.term_4_end = self.ui.term_4_end_dt.date()
+        self.term_values.term_4_write = self.ui.term_4_write_ck.isChecked()
+        self.window.close()
+
+
+    def cancel_btn(self):
+        self.window.close()
+
+
+    

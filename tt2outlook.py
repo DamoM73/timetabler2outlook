@@ -1,9 +1,10 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QMainWindow
 from Ui_tt2outlook import Ui_MainWindow
-from outlook_utils import Calendar, Lesson
+from outlook_utils import Calendar, Lesson, TermValues
 from datastore import Datastore
 from edit_lesson import EditLesson
+from term_settings import TermSettings
 
 
 
@@ -18,7 +19,9 @@ class MainWindow:
         self.db = Datastore()
         self.lessons = self.db.create_lessons()
         
-        #self.test_data()
+        # ---- Variables ---- #
+        self.term_values = TermValues()
+        
         self.write_lessons()
         self.signals()
 
@@ -113,7 +116,29 @@ class MainWindow:
         self.write_to_button(self.ui.fri_as_btn,self.lessons[69])
                 
 
+    def format_date(self,date):
+        day = date.day()
+        month = date.month()
+        year = date.year()
+        
+        if day < 10:
+            day = "0" + str(day)
+        else:
+            day = str(day)
+            
+        if month < 10:
+            month = "0" + str(month)
+        else:
+            month = str(month)
+            
+        return f"{year}-{month}-{day}"
+
+
+
     def signals(self):
+        # ---- control buttons ---- #
+        self.ui.term_settings_btn.clicked.connect(lambda: self.term_settings(self.term_values))
+        # ---- lessons buttons ---- #
         self.ui.mon_bs_btn.clicked.connect(lambda: self.edit_lesson(0))
         self.ui.mon_bf_btn.clicked.connect(lambda: self.edit_lesson(1))
         self.ui.mon_f_btn.clicked.connect(lambda: self.edit_lesson(2))
@@ -184,6 +209,7 @@ class MainWindow:
         self.ui.fri_p5_btn.clicked.connect(lambda: self.edit_lesson(67))
         self.ui.fri_p6_btn.clicked.connect(lambda: self.edit_lesson(68))
         self.ui.fri_as_btn.clicked.connect(lambda: self.edit_lesson(69))
+        
     
     
     # ---- Slots ---- #
@@ -191,6 +217,9 @@ class MainWindow:
         lesson = self.lessons[lesson_num]
         EditLesson(lesson)
         self.write_lessons()
+        
+    def term_settings(self,term_values):
+        TermSettings(term_values)
         
 
 if __name__ == '__main__':
