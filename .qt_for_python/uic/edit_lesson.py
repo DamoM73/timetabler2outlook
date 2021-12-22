@@ -48,16 +48,20 @@ class Ui_Dialog(object):
         self.room_ent.setObjectName("room_ent")
         self.horizontalLayout_2.addWidget(self.room_ent)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
-        self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
-        self.buttonBox.setOrientation(QtCore.Qt.Orientation.Horizontal)
-        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.StandardButton.Cancel|QtWidgets.QDialogButtonBox.StandardButton.Ok)
-        self.buttonBox.setObjectName("buttonBox")
-        self.verticalLayout.addWidget(self.buttonBox)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem)
+        self.ok_btn = QtWidgets.QPushButton(Dialog)
+        self.ok_btn.setObjectName("ok_btn")
+        self.horizontalLayout_3.addWidget(self.ok_btn)
+        self.cancel_btn = QtWidgets.QPushButton(Dialog)
+        self.cancel_btn.setObjectName("cancel_btn")
+        self.horizontalLayout_3.addWidget(self.cancel_btn)
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
         self.gridLayout.addLayout(self.verticalLayout, 0, 0, 1, 1)
 
         self.retranslateUi(Dialog)
-        self.buttonBox.accepted.connect(Dialog.accept) # type: ignore
-        self.buttonBox.rejected.connect(Dialog.reject) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
@@ -66,3 +70,5 @@ class Ui_Dialog(object):
         self.label.setText(_translate("Dialog", "Edit Lesson Details"))
         self.label_2.setText(_translate("Dialog", "Lesson Name"))
         self.label_3.setText(_translate("Dialog", "Lesson Room"))
+        self.ok_btn.setText(_translate("Dialog", "Ok"))
+        self.cancel_btn.setText(_translate("Dialog", "Cancel"))

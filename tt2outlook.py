@@ -3,7 +3,7 @@ from PyQt6.QtWidgets import QApplication, QMainWindow
 from Ui_tt2outlook import Ui_MainWindow
 from outlook_utils import Calendar, Lesson
 from datastore import Datastore
-from edit_lesson import LessonEdit
+from edit_lesson import EditLesson
 
 
 
@@ -21,8 +21,7 @@ class MainWindow:
         #self.test_data()
         self.write_lessons()
         self.signals()
-        
-        # ---- Add Widgets to Stacked Widget
+
 
 
     def show(self):
@@ -187,17 +186,9 @@ class MainWindow:
     
     # ---- Slots ---- #
     def edit_lesson(self,lesson_num):       
-        diag = LessonEdit(self.lessons[lesson_num])
-        '''
-        if self.lessons[lesson_num] != None:
-            print(self.lessons[lesson_num].show_lesson())
-            print(self.lessons[lesson_num].day,
-                  self.lessons[lesson_num].period,
-                  self.lessons[lesson_num].subject,
-                  self.lessons[lesson_num].start,
-                  self.lessons[lesson_num].duration,
-                  self.lessons[lesson_num].location)
-                  '''
+        EditLesson(self.lessons[lesson_num])
+        self.write_lessons()
+        
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
