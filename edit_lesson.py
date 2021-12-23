@@ -13,6 +13,7 @@ class EditLesson:
         self.lesson = lesson
         self.ui.name_ent.setText(self.lesson.subject)
         self.ui.room_ent.setText(self.lesson.location)
+        self.ui.category_ent.setText(self.lesson.category)
         self.signals()
         self.window.exec()
         
@@ -26,6 +27,7 @@ class EditLesson:
     def ok_btn(self):
         self.lesson.subject = self.ui.name_ent.text()
         self.lesson.location = self.ui.room_ent.text()
+        self.lesson.category = self.ui.category_ent.text()
         self.window.close()
 
 

@@ -1,7 +1,8 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QMainWindow
+from PyQt6.QtWidgets import QApplication, QFileDialog, QMainWindow, QMessageBox
 from Ui_tt2outlook import Ui_MainWindow
-from outlook_utils import Calendar, Lesson, TermValues
+from outlook_api import Calendar, Lesson
+from settings import TermValues, UserOptions
 from datastore import Datastore
 from edit_lesson import EditLesson
 from term_settings import TermSettings
@@ -19,8 +20,13 @@ class MainWindow:
         self.db = Datastore()
         self.lessons = self.db.create_lessons()
         
+        # ---- Initialis
+        self.cal = Calendar()
+        
         # ---- Variables ---- #
         self.term_values = TermValues()
+        self.options = UserOptions()
+        self.file = None
         
         self.write_lessons()
         self.signals()
@@ -39,7 +45,9 @@ class MainWindow:
 
 
     def write_to_button(self,button,lesson):
-        if lesson != None:
+        if self.options.categories:
+            button.setText(lesson.subject+"\n"+lesson.location+"\n"+lesson.category)
+        else:
             button.setText(lesson.subject+"\n"+lesson.location)
 
 
@@ -134,10 +142,68 @@ class MainWindow:
         return f"{year}-{month}-{day}"
 
 
+    def finished_msg(self):
+        msg = QMessageBox()
+        msg.setText("Export Complete")
+        msg.setInformativeText("Calendar Events have been exported to Outlook")
+        msg.setWindowTitle("Complete")
+        msg.exec()                
+
+
+    def get_dates(self):
+        dates = []
+        if self.term_values.term_1_write:
+            date = self.term_values.term_1_start
+            while date <= self.term_values.term_1_end:
+                if date.dayOfWeek() < 6:
+                    dates.append(date)
+                date = date.addDays(1)
+        
+        if self.term_values.term_2_write:
+            date = self.term_values.term_2_start
+            while date <= self.term_values.term_2_end:
+                if date.dayOfWeek() < 6:
+                    dates.append(date)
+                date = date.addDays(1)
+        
+        if self.term_values.term_3_write:
+            date = self.term_values.term_3_start
+            while date <= self.term_values.term_3_end:
+                if date.dayOfWeek() < 6:
+                    dates.append(date)
+                date = date.addDays(1)
+        
+        if self.term_values.term_4_write:
+            date = self.term_values.term_4_start
+            while date <= self.term_values.term_4_end:
+                if date.dayOfWeek() < 6:
+                    dates.append(date)
+                date = date.addDays(1)
+        
+        return dates
+    
+
+    def name_day_of_week(self,num):
+        if num == 1:
+            return "Mon"
+        elif num == 2:
+            return "Tues"
+        elif num == 3:
+            return "Wed"
+        elif num == 4:
+            return "Thurs"
+        elif num == 5:
+            return "Fri"
+        else:
+            return False
+        
 
     def signals(self):
         # ---- control buttons ---- #
+        self.ui.excel_btn.clicked.connect(self.get_file_name)
+        self.ui.write_btn.clicked.connect(self.write_btn_clicked)
         self.ui.term_settings_btn.clicked.connect(lambda: self.term_settings(self.term_values))
+        self.ui.categories_ck.stateChanged.connect(self.category_clicked)
         # ---- lessons buttons ---- #
         self.ui.mon_bs_btn.clicked.connect(lambda: self.edit_lesson(0))
         self.ui.mon_bf_btn.clicked.connect(lambda: self.edit_lesson(1))
@@ -211,16 +277,47 @@ class MainWindow:
         self.ui.fri_as_btn.clicked.connect(lambda: self.edit_lesson(69))
         
     
-    
     # ---- Slots ---- #
     def edit_lesson(self,lesson_num):
         lesson = self.lessons[lesson_num]
         EditLesson(lesson)
         self.write_lessons()
         
+        
     def term_settings(self,term_values):
         TermSettings(term_values)
         
+        
+    def write_btn_clicked(self):
+        # get dates
+        dates = self.get_dates()
+        for date in dates:
+            day = self.name_day_of_week(date.dayOfWeek())
+            for lesson in self.lessons:
+                if lesson.day == day and lesson.subject != "":
+                    start = f"{self.format_date(date)} {lesson.start}"
+                    if self.options.categories:
+                        category = (True,lesson.category)
+                    else:
+                        category = (False,lesson.category)
+                    self.cal.write_appointment(start,lesson.subject,lesson.duration,lesson.location,category)
+        self.finished_msg()
+
+        
+    def category_clicked(self):
+        self.options.categories = self.ui.categories_ck.isChecked()
+        self.write_lessons()
+                    
+    
+    def get_file_name(self):
+        self. = QFileDialog.getOpenFileName(None, 
+                                               "Select you timetable file...", 
+                                               None, 
+                                               "xlsx(*.xlsx)")
+        
+        
+        
+            
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

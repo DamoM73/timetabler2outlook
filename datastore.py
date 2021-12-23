@@ -1,5 +1,5 @@
 from openpyxl import load_workbook
-from outlook_utils import Lesson
+from outlook_api import Lesson
 
 class Datastore:
     
@@ -69,7 +69,11 @@ class Datastore:
                 else:
                     lesson_name = ""
                     lesson_room = ""
+                if lesson != "":
+                    category = "Classes"
+                else:
+                    category = ""
                         
-                lessons.append(Lesson(lesson_day, lesson_period, lesson_name, lesson_time, lesson_duration, lesson_room))
+                lessons.append(Lesson(lesson_day, lesson_period, lesson_name, lesson_time, lesson_duration, lesson_room, category))
                
         return lessons

@@ -46,7 +46,13 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="name_ent"/>
+        <widget class="QLineEdit" name="name_ent">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -65,7 +71,38 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="room_ent"/>
+        <widget class="QLineEdit" name="room_ent">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Category       </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="category_ent">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
