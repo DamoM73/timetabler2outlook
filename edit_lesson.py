@@ -1,6 +1,6 @@
-import sys
-from PyQt6.QtWidgets import QApplication, QMainWindow, QDialog
+from PyQt6.QtWidgets import QDialog
 from Ui_edit_lesson import Ui_Dialog
+from PyQt6.QtGui import QIcon
 
 
 class EditLesson:
@@ -9,6 +9,7 @@ class EditLesson:
         self.window = QDialog()
         self.ui = Ui_Dialog()
         self.ui.setupUi(self.window)
+        self.window.setWindowIcon(QIcon("crest.png"))
         self.window.show()
         self.lesson = lesson
         self.ui.name_ent.setText(self.lesson.subject)

@@ -1,8 +1,6 @@
-import sys
-from datetime import date
-from PyQt6.QtWidgets import QApplication, QMainWindow, QDialog, QMessageBox
-from PyQt6.QtCore import QDate
+from PyQt6.QtWidgets import QDialog, QMessageBox
 from Ui_term_settings import Ui_Dialog
+from PyQt6.QtGui import QIcon
 
 
 class TermSettings:
@@ -15,6 +13,7 @@ class TermSettings:
         self.term_values = term_values
         self.set_values()
         self.window.show()
+        self.window.setWindowIcon(QIcon("crest.png"))
         self.window.exec()
         
 

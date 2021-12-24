@@ -1,7 +1,8 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QFileDialog, QMainWindow, QMessageBox
+from PyQt6.QtGui import QIcon
 from Ui_tt2outlook import Ui_MainWindow
-from outlook_api import Calendar, Lesson
+from outlook_api import Calendar
 from settings import TermValues, UserOptions
 from datastore import Datastore
 from edit_lesson import EditLesson
@@ -15,6 +16,7 @@ class MainWindow:
         self.main_win = QMainWindow()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.main_win)
+        self.main_win.setWindowIcon(QIcon("crest.png"))
         
         # ---- Setuip datastore ---- #
         self.db = None
