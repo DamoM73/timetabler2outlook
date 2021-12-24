@@ -16,9 +16,9 @@ class MainWindow:
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.main_win)
         
-        # ---- Extract details from Datastore
-        self.db = Datastore()
-        self.lessons = self.db.create_lessons()
+        # ---- Setuip datastore ---- #
+        self.db = None
+        self.lessons = None
         
         # ---- Initialis
         self.cal = Calendar()
@@ -28,8 +28,8 @@ class MainWindow:
         self.options = UserOptions()
         self.file = None
         
-        self.write_lessons()
         self.signals()
+        self.get_file_name()
 
 
     def show(self):
@@ -310,15 +310,16 @@ class MainWindow:
                     
     
     def get_file_name(self):
-        self. = QFileDialog.getOpenFileName(None, 
+        file, _ =  QFileDialog.getOpenFileName(None, 
                                                "Select you timetable file...", 
                                                None, 
                                                "xlsx(*.xlsx)")
+        self.db = Datastore(file)
+        self.lessons = self.db.create_lessons()
+        self.write_lessons()
         
         
         
-            
-
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     main_win = MainWindow()

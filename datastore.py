@@ -3,8 +3,8 @@ from outlook_api import Lesson
 
 class Datastore:
     
-    def __init__(self):
-        self.file = "Sheet1.xlsx"
+    def __init__(self, file):
+        self.file = file
         self.workbook = load_workbook(filename = self.file)
         self.sheet = self.workbook.active
         self.periods = self.get_period_names()
@@ -53,7 +53,7 @@ class Datastore:
         lessons = []
         day_names = ["Mon", "Tues", "Wed", "Thurs", "Fri"]
         lesson_times = [("",0),("08:00",20),("08:20",10,),("08:30",55),("09:25",55),("10:20",15),("10:35",15),
-                        ("10:50",55),("11:45",55),("12:40",20),("13:00",20),("13:20",55),("14:15",55),("3:10",20)]
+                        ("10:50",55),("11:45",55),("12:40",20),("13:00",20),("13:20",55),("14:15",55),("15:10",20)]
 
         for day_num, day in enumerate(self.days):
             for period_num, lesson in enumerate(day):                

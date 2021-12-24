@@ -22,7 +22,7 @@ class Calendar:
         if category[0]:
             appt.Categories = category[1]
         appt.BusyStatus = 2
-        appt.MeetingStatus = 1
+        appt.MeetingStatus = 0
 
         appt.Save()
         appt.Send()

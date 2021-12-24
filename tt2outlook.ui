@@ -1433,22 +1433,26 @@ color: rgb(0, 170, 255);</string>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <spacer name="horizontalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
          <widget class="QPushButton" name="excel_btn">
           <property name="text">
-           <string>Load Excel File</string>
+           <string>Change Excel File</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="term_settings_btn">
+          <property name="text">
+           <string>Term Settings</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="write_btn">
+          <property name="toolTip">
+           <string>Send lessons to Outllook Calendar</string>
+          </property>
+          <property name="text">
+           <string>Export to Outlook</string>
           </property>
          </widget>
         </item>
@@ -1474,36 +1478,6 @@ color: rgb(0, 170, 255);</string>
           </property>
           <property name="text">
            <string>Use Categories</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QPushButton" name="term_settings_btn">
-          <property name="text">
-           <string>Term Settings</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="write_btn">
-          <property name="toolTip">
-           <string>Send lessons to Outllook Calendar</string>
-          </property>
-          <property name="text">
-           <string>To Calendar</string>
           </property>
          </widget>
         </item>
