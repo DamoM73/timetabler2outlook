@@ -48,9 +48,9 @@ class MainWindow:
 
     def write_to_button(self,button,lesson):
         if self.options.categories:
-            button.setText(lesson.subject+"\n"+lesson.location+"\n"+lesson.category)
+            button.setText(f"{lesson.subject} - {lesson.location}\n{lesson.category}")
         else:
-            button.setText(lesson.subject+"\n"+lesson.location)
+            button.setText(f"{lesson.subject} - {lesson.location}")
 
 
     def write_lessons(self):
@@ -320,10 +320,12 @@ class MainWindow:
         self.lessons = self.db.create_lessons()
         self.write_lessons()
         
-        
-        
-if __name__ == '__main__':
+def main():
     app = QApplication(sys.argv)
     main_win = MainWindow()
     main_win.show()
     sys.exit(app.exec())
+            
+        
+if __name__ == '__main__':
+    main()
