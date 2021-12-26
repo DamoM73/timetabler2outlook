@@ -4,3 +4,5 @@
 ## Required Libraries
 - pywin32
 - pypiwin32
+- pyqt6
+- openpyxl
