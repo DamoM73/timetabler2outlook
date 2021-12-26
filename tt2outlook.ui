@@ -6,15 +6,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>900</width>
-    <height>695</height>
+    <width>899</width>
+    <height>494</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Time Tabler to Outlook</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>9</number>
+    </property>
+    <property name="topMargin">
+     <number>9</number>
+    </property>
+    <property name="rightMargin">
+     <number>9</number>
+    </property>
+    <property name="bottomMargin">
+     <number>9</number>
+    </property>
     <item row="0" column="0">
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
@@ -23,8 +35,16 @@
          <widget class="QLabel" name="period_lb">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>14</pointsize>
+            <weight>9</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 255);</string>
           </property>
           <property name="text">
            <string>Period</string>
@@ -35,8 +55,16 @@
          <widget class="QLabel" name="mon_lb">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>14</pointsize>
+            <weight>9</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 255);</string>
           </property>
           <property name="text">
            <string>Mon</string>
@@ -50,8 +78,16 @@
          <widget class="QLabel" name="tues_lb">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>14</pointsize>
+            <weight>9</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 255);</string>
           </property>
           <property name="text">
            <string>Tues</string>
@@ -65,8 +101,16 @@
          <widget class="QLabel" name="wed_lb">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>14</pointsize>
+            <weight>9</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 255);</string>
           </property>
           <property name="text">
            <string>Wed</string>
@@ -80,8 +124,16 @@
          <widget class="QLabel" name="thurs_lb">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>14</pointsize>
+            <weight>9</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 255);</string>
           </property>
           <property name="text">
            <string>Thurs</string>
@@ -95,8 +147,16 @@
          <widget class="QLabel" name="fri_lb">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>14</pointsize>
+            <weight>9</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 170, 255);</string>
           </property>
           <property name="text">
            <string>Fri</string>
@@ -118,7 +178,7 @@
            </font>
           </property>
           <property name="text">
-           <string>BS</string>
+           <string>Before School</string>
           </property>
          </widget>
         </item>
@@ -126,7 +186,7 @@
          <widget class="QPushButton" name="mon_bs_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -141,7 +201,7 @@
          <widget class="QPushButton" name="tues_bs_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -156,7 +216,7 @@
          <widget class="QPushButton" name="wed_bs_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -171,7 +231,7 @@
          <widget class="QPushButton" name="thurs_bs_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -186,7 +246,7 @@
          <widget class="QPushButton" name="fri_bs_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -209,7 +269,7 @@
            </font>
           </property>
           <property name="text">
-           <string>BF</string>
+           <string>Before Form</string>
           </property>
          </widget>
         </item>
@@ -217,7 +277,7 @@
          <widget class="QPushButton" name="mon_bf_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -232,7 +292,7 @@
          <widget class="QPushButton" name="tues_bf_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -247,7 +307,7 @@
          <widget class="QPushButton" name="wed_bf_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -262,7 +322,7 @@
          <widget class="QPushButton" name="thurs_bf_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -277,7 +337,7 @@
          <widget class="QPushButton" name="fri_bf_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -300,7 +360,7 @@
            </font>
           </property>
           <property name="text">
-           <string>F</string>
+           <string>Form</string>
           </property>
          </widget>
         </item>
@@ -308,7 +368,7 @@
          <widget class="QPushButton" name="mon_f_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -323,7 +383,7 @@
          <widget class="QPushButton" name="tues_f_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -338,7 +398,7 @@
          <widget class="QPushButton" name="wed_f_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -353,7 +413,7 @@
          <widget class="QPushButton" name="thurs_f_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -368,7 +428,7 @@
          <widget class="QPushButton" name="fri_f_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -399,7 +459,7 @@
          <widget class="QPushButton" name="mon_p1_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -414,7 +474,7 @@
          <widget class="QPushButton" name="tues_p1_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -429,7 +489,7 @@
          <widget class="QPushButton" name="wed_p1_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -444,7 +504,7 @@
          <widget class="QPushButton" name="thurs_p1_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -459,7 +519,7 @@
          <widget class="QPushButton" name="fri_p1_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -490,7 +550,7 @@
          <widget class="QPushButton" name="mon_p2_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -505,7 +565,7 @@
          <widget class="QPushButton" name="tues_p2_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -520,7 +580,7 @@
          <widget class="QPushButton" name="wed_p2_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -535,7 +595,7 @@
          <widget class="QPushButton" name="thurs_p2_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -550,7 +610,7 @@
          <widget class="QPushButton" name="fri_p2_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -573,7 +633,7 @@
            </font>
           </property>
           <property name="text">
-           <string>FBFH</string>
+           <string>1st Break 1st Half</string>
           </property>
          </widget>
         </item>
@@ -581,7 +641,7 @@
          <widget class="QPushButton" name="mon_fbfh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -596,7 +656,7 @@
          <widget class="QPushButton" name="tues_fbfh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -611,7 +671,7 @@
          <widget class="QPushButton" name="wed_fbfh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -626,7 +686,7 @@
          <widget class="QPushButton" name="thurs_fbfh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -641,7 +701,7 @@
          <widget class="QPushButton" name="fri_fbfh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -664,7 +724,7 @@
            </font>
           </property>
           <property name="text">
-           <string>FBSH</string>
+           <string>1st Break 2nd Half</string>
           </property>
          </widget>
         </item>
@@ -672,7 +732,7 @@
          <widget class="QPushButton" name="mon_fbsh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -687,7 +747,7 @@
          <widget class="QPushButton" name="tues_fbsh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -702,7 +762,7 @@
          <widget class="QPushButton" name="wed_fbsh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -717,7 +777,7 @@
          <widget class="QPushButton" name="thurs_fbsh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -732,7 +792,7 @@
          <widget class="QPushButton" name="fri_fbsh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -763,7 +823,7 @@
          <widget class="QPushButton" name="mon_p3_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -778,7 +838,7 @@
          <widget class="QPushButton" name="tues_p3_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -793,7 +853,7 @@
          <widget class="QPushButton" name="wed_p3_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -808,7 +868,7 @@
          <widget class="QPushButton" name="thurs_p3_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -823,7 +883,7 @@
          <widget class="QPushButton" name="fri_p3_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -854,7 +914,7 @@
          <widget class="QPushButton" name="mon_p4_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -869,7 +929,7 @@
          <widget class="QPushButton" name="tues_p4_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -884,7 +944,7 @@
          <widget class="QPushButton" name="wed_p4_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -899,7 +959,7 @@
          <widget class="QPushButton" name="thurs_p4_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -914,7 +974,7 @@
          <widget class="QPushButton" name="fri_p4_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -937,7 +997,7 @@
            </font>
           </property>
           <property name="text">
-           <string>SBFH</string>
+           <string>2nd Break 1st Half</string>
           </property>
          </widget>
         </item>
@@ -945,7 +1005,7 @@
          <widget class="QPushButton" name="mon_sbfh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -960,7 +1020,7 @@
          <widget class="QPushButton" name="tues_sbfh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -975,7 +1035,7 @@
          <widget class="QPushButton" name="wed_sbfh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -990,7 +1050,7 @@
          <widget class="QPushButton" name="thurs_sbfh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1005,7 +1065,7 @@
          <widget class="QPushButton" name="fri_sbfh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1028,7 +1088,7 @@
            </font>
           </property>
           <property name="text">
-           <string>SBSH</string>
+           <string>2nd Break 2nd Half</string>
           </property>
          </widget>
         </item>
@@ -1036,7 +1096,7 @@
          <widget class="QPushButton" name="mon_sbsh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1051,7 +1111,7 @@
          <widget class="QPushButton" name="tues_sbsh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1066,7 +1126,7 @@
          <widget class="QPushButton" name="wed_sbsh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1081,7 +1141,7 @@
          <widget class="QPushButton" name="thurs_sbsh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1096,7 +1156,7 @@
          <widget class="QPushButton" name="fri_sbsh_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1127,7 +1187,7 @@
          <widget class="QPushButton" name="mon_p5_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1142,7 +1202,7 @@
          <widget class="QPushButton" name="tues_p5_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1157,7 +1217,7 @@
          <widget class="QPushButton" name="wed_p5_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1172,7 +1232,7 @@
          <widget class="QPushButton" name="thurs_p5_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1187,7 +1247,7 @@
          <widget class="QPushButton" name="fri_p5_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1218,7 +1278,7 @@
          <widget class="QPushButton" name="mon_p6_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1233,7 +1293,7 @@
          <widget class="QPushButton" name="tues_p6_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1248,7 +1308,7 @@
          <widget class="QPushButton" name="wed_p6_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1263,7 +1323,7 @@
          <widget class="QPushButton" name="thurs_p6_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1278,7 +1338,7 @@
          <widget class="QPushButton" name="fri_p6_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1301,7 +1361,7 @@
            </font>
           </property>
           <property name="text">
-           <string>AS</string>
+           <string>After School</string>
           </property>
          </widget>
         </item>
@@ -1309,7 +1369,7 @@
          <widget class="QPushButton" name="mon_as_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1324,7 +1384,7 @@
          <widget class="QPushButton" name="tues_as_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1339,7 +1399,7 @@
          <widget class="QPushButton" name="wed_as_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1354,7 +1414,7 @@
          <widget class="QPushButton" name="thurs_as_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1369,7 +1429,7 @@
          <widget class="QPushButton" name="fri_as_btn">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>8</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1382,11 +1442,63 @@
         </item>
        </layout>
       </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="excel_btn">
+          <property name="text">
+           <string>Change Excel File</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="term_settings_btn">
+          <property name="text">
+           <string>Term Settings</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="write_btn">
+          <property name="toolTip">
+           <string>Send lessons to Outllook Calendar</string>
+          </property>
+          <property name="text">
+           <string>Export to Outlook</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="categories_ck">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Use Categories</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
      </layout>
     </item>
    </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

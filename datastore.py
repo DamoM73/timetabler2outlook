@@ -1,10 +1,10 @@
 from openpyxl import load_workbook
-from outlook_utils import Lesson
+from outlook_api import Lesson
 
 class Datastore:
     
-    def __init__(self):
-        self.file = "Sheet1.xlsx"
+    def __init__(self, file):
+        self.file = file
         self.workbook = load_workbook(filename = self.file)
         self.sheet = self.workbook.active
         self.periods = self.get_period_names()
@@ -14,6 +14,7 @@ class Datastore:
     def get_value(self,cell):
         return self.sheet[cell].value
     
+    
     def get_period_names(self):
         for row in self.sheet.iter_rows(min_row = 3,
                                        max_row = 3, 
@@ -21,6 +22,7 @@ class Datastore:
                                        max_col = 15,
                                        values_only = True):
             return(row)
+    
     
     def get_time_table(self):
         days = []
@@ -32,6 +34,7 @@ class Datastore:
             days.append(row)
             
         return days
+    
     
     def get_lesson_and_room(self, raw):
         """
@@ -50,24 +53,27 @@ class Datastore:
         lessons = []
         day_names = ["Mon", "Tues", "Wed", "Thurs", "Fri"]
         lesson_times = [("",0),("08:00",20),("08:20",10,),("08:30",55),("09:25",55),("10:20",15),("10:35",15),
-                        ("10:50",55),("11:45",55),("12:40",20),("13:00",20),("13:20",55),("14:15",55),("3:10",20)]
+                        ("10:50",55),("11:45",55),("12:40",20),("13:00",20),("13:20",55),("14:15",55),("15:10",20)]
 
         for day_num, day in enumerate(self.days):
-            for period_num, lesson in enumerate(day):
+            for period_num, lesson in enumerate(day):                
+                lesson_day = day_names[day_num]
+                lesson_period = self.periods[period_num]
+                lesson_time = lesson_times[period_num][0]
+                lesson_duration = lesson_times[period_num][1]
                 if lesson != "":
-                    lesson_day = day_names[day_num]
-                    lesson_period = self.periods[period_num]
-                    lesson_time = lesson_times[period_num][0]
-                    lesson_duration = lesson_times[period_num][1]
                     lesson_name, lesson_room = self.get_lesson_and_room(lesson)
                     if lesson_room == None:
                         lesson_room = lesson_name
                         lesson_name = "Duty"
-                        
-                    lessons.append(Lesson(lesson_day, lesson_period, lesson_name, lesson_time, lesson_duration, lesson_room))
                 else:
-                    lessons.append(None)
-
+                    lesson_name = ""
+                    lesson_room = ""
+                if lesson != "":
+                    category = "Classes"
+                else:
+                    category = ""
+                        
+                lessons.append(Lesson(lesson_day, lesson_period, lesson_name, lesson_time, lesson_duration, lesson_room, category))
+               
         return lessons
-
-        
